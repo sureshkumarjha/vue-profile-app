@@ -25,7 +25,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "tachyons": "^4.12.0"
   },
   "eslintConfig": {
     "root": true,
@@ -34,8 +35,7 @@
     },
     "extends": [
       "plugin:vue/vue3-essential",
-      "eslint:recommended",
-      "plugin:prettier/recommended"
+      "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
