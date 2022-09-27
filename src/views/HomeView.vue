@@ -2,43 +2,21 @@
   <div>
     <section>
       <div className="tc flex justify-center" id="section1">
-        <div className='overlay shadow-1' style='z-index:"-1"'></div>
+        <div className='overlay theme-light-blue-bg'></div>
         <div className='flex flex-column justify-center items-center '>
-          <img :src="profile" height="250" width="250" className='ma3 br-100 shadow-1 avtar-shadow' />
+          <img :src="profile" height="250" className='ma3 br-100 shadow-1 avtar-shadow' />
           <div className='subheading'>HEY! I AM</div>
           <div className='f2 heading pa2 b'>Suresh Kumar Jha</div>
-          <!-- <SlidingText /> -->
-          <SlidingTextComponent/>
+          <SlidingTextComponent />
         </div>
       </div>
     </section>
 
-    <section id="about" className='container section flex  justify-center items-center '>
-      <div>
-        <div className='subheading tc f2 pa2 ma5'>ABOUT ME</div>
-
-        <div className="flex justify-center items-center aboutparent">
-
-          <div className="block">
-            <img :src="avtar" height="450" width="450"  alt="A bright blue sky" className='br4' />
-          </div>
-
-          <div className="aboutblock container ">
-
-            <div className="flex"><span>Name :</span> <span>Suresh Jha</span></div>
-            <div className="flex"><span>DOB:</span> <span>March 22, 1999</span></div>
-            <div className="flex"><span>Zip code :</span> <span>400080</span></div>
-            <div className="flex"><span>Email :</span> <span>ronaldo@gmail.com</span></div>
-            <div className="flex"><span>Phone : </span> <span>+1-2234-5678-9-0</span></div>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <AboutComponent />
 
     <hr className=" bb b--black-10" />
 
-    <section id="resume" >
+    <section id="resume">
       <div className='subheading tc f2 pa2 ma5'>RESUME</div>
       <div className="tc flex justify-center flex-wrap container">
 
@@ -203,23 +181,25 @@
 import avtar from "../assets/avtar.jpg";
 import profile from "../assets/suresh.jpg";
 import SlidingTextComponent from "@/components/SlidingTextComponent.vue";
+import AboutComponent from "@/components/AboutComponent.vue";
 
 export default {
   name: "HomeView",
   data() {
     return {
-      avtar : avtar,
-      profile : profile
+      avtar: avtar,
+      profile: profile
     }
   },
   components: {
-    SlidingTextComponent
-},
+    SlidingTextComponent,
+    AboutComponent
+  },
 };
 </script>
 
 <style>
-  .avtar-shadow{
-    z-index: 1;
-  }
+.avtar-shadow {
+  z-index: 1;
+}
 </style>

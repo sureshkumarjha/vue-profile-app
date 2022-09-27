@@ -12,7 +12,7 @@ export default {
     name: "SlidingTextComponent",
     data() {
         return {
-            val: ""
+            val: "",
         }
     },
     mounted() {
@@ -20,7 +20,7 @@ export default {
         let i = 0
         let c = 0
         let flag = true
-        let delta = 250
+        let delta = 200
         const interval = setInterval(() => {
             if (c < arr[i].length && flag) {
                 c = c + 1
@@ -37,7 +37,7 @@ export default {
                 }
             }
             this.val = arr[i].substring(0, c);
-        }, delta);
+        },delta);
         return () => clearInterval(interval);
     }
 }

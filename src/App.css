@@ -73,16 +73,22 @@ html {
 
 .subheading {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1.5em;
     font-weight: 800;
     color: #3e64ff;
     letter-spacing: 4px;
+    margin-top: 4em;
+    margin-bottom: 2em;
 }
 
 .heading {
     text-transform: uppercase;
     font-weight: 1000;
     letter-spacing: 1px;
+}
+
+.theme-light-blue-bg{
+    background: #0036ff14;
 }
 
 .overlay {
@@ -92,9 +98,9 @@ html {
     right: 0;
     bottom: 0;
     content: '';
-    opacity: .1;
     width: 50%;
-    background: #3e64ff;
+    height: 102vh;
+    z-index: -1;
 }
 
 /*Nav Side Bar*/
@@ -137,50 +143,18 @@ html {
     margin-left: 50px;
 }
 
-.aboutblock {
-    margin: 1em;
-}
-
-.aboutblock div {
-    padding: 0.5em;
-}
-
-.aboutblock div span {
-    width: calc(100% - 130px);
-    font-size: 20px;
-    line-height: 1.8;
-    font-weight: 400;
-    color: #999;
-}
-
-.aboutblock div span:first-child {
-    font-size: 10;
-    font-weight: 1000;
-    color: #000;
-    width: 130px;
-}
-
-.block {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .section {
     min-height: 100vh;
 }
 
 @media only screen and (max-width: 600px) {
-    .block {
-        display: block;
-    }
-
-    .aboutparent {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .container {
         margin-right: 1em;
         margin-left: 1em;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+        .App-logo {
+            animation: none;
+        }
     }
 }
