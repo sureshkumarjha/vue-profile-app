@@ -2,14 +2,14 @@
     <div class="timeline">
         <div class="container left">
             <div class="content grow shadow-3">
-                <h2 class="fw9">TATA CONSULTANCY SERVICES</h2>
+                <h2 class="fw6">TATA CONSULTANCY SERVICES</h2>
                 <h4 class="o-60">July 2021 - Present | Mumbai, MH</h4>
                 <p>SOFTWARE ENGINEER</p>
             </div>
         </div>
         <div class="container right">
             <div class="content grow shadow-3">
-                <h2 class="fw9">ABN AMRO BANK - ORDER PROCESSING</h2>
+                <h2 class="fw6">ABN AMRO BANK - ORDER PROCESSING</h2>
                 <h4 class="o-60">Feb 2021 - Present | Role: Devops Engineer</h4>
                 <p>
                     vai TATA CONSULTANCY SERVICES
@@ -24,7 +24,7 @@
         </div>
         <div class="container left">
             <div class="content grow shadow-3">
-                <h2 class="fw9">MANPOWERGROUP USA- EXPERIS 2.0</h2>
+                <h2 class="fw6">MANPOWERGROUP USA- EXPERIS 2.0</h2>
                 <h4 class="o-60">July 2021 – Feb 2022| Role: Developer</h4>
                 <p>
                     vai TATA CONSULTANCY SERVICES
@@ -40,7 +40,7 @@
         <div v-for="(data,index) in timelineData" :key="index">
             <div class="container" :class="{ 'right' : (index%2==leftStart) , 'left' : !(index%2==leftStart)}">
                 <div class="content grow shadow-3" >
-                    <h2 class="fw9">{{data.title}}</h2>
+                    <h2 class="fw6">{{data.title}}</h2>
                     <h4 class="o-60">{{data.subheading}}</h4>
                     <p>{{data.description}}</p>
                 </div>
@@ -75,7 +75,7 @@ export default {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     top: 0;
     bottom: 0;
     left: 56%;
@@ -98,7 +98,7 @@ export default {
     height: 25px;
     right: -17px;
     background-color: white;
-    border: 4px solid #FF9F55;
+    border: 4px solid #3e64ff;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
