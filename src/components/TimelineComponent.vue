@@ -1,43 +1,64 @@
 <template>
     <div class="timeline">
         <div class="container left">
-            <div class="content">
-                <h2>2017</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                    mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                    primis ea eam.</p>
+            <div class="content grow shadow-3">
+                <h2 class="fw9">TATA CONSULTANCY SERVICES</h2>
+                <h4 class="o-60">July 2021 - Present | Mumbai, MH</h4>
+                <p>SOFTWARE ENGINEER</p>
             </div>
         </div>
         <div class="container right">
-            <div class="content">
-                <h2>2016</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                    mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                    primis ea eam.</p>
+            <div class="content grow shadow-3">
+                <h2 class="fw9">ABN AMRO BANK - ORDER PROCESSING</h2>
+                <h4 class="o-60">Feb 2021 - Present | Role: Devops Engineer</h4>
+                <p>
+                    vai TATA CONSULTANCY SERVICES
+                <ul>
+                    <li>Adopted Devops way of working and migrated applications
+                        from on-premises IBM CMS to public cloud Azure FSCP 3.0 with new enhancements</li>
+                    <li>Implemented PingFederate Oauth 2.0
+                        Authorization code flow and Client credential flow in application.</li>
+                </ul>
+                </p>
             </div>
         </div>
         <div class="container left">
-            <div class="content">
-                <h2>2015</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                    mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                    primis ea eam.</p>
+            <div class="content grow shadow-3">
+                <h2 class="fw9">MANPOWERGROUP USA- EXPERIS 2.0</h2>
+                <h4 class="o-60">July 2021 – Feb 2022| Role: Developer</h4>
+                <p>
+                    vai TATA CONSULTANCY SERVICES
+                <ul>
+                    <li>Developed new screens and rest services for Inheritance feature using
+                        Angular 9, Springboot and SQL</li>
+                    <li>Improved code quality and optimized the UI & deployment and testing of the system including unit
+                        testing</li>
+                </ul>
+                </p>
             </div>
         </div>
-        <div class="container right">
-            <div class="content">
-                <h2>2012</h2>
-                <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea
-                    mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-                    primis ea eam.</p>
+        <div v-for="(data,index) in timelineData" :key="index">
+            <div class="container" :class="{ 'right' : (index%2==leftStart) , 'left' : !(index%2==leftStart)}">
+                <div class="content grow shadow-3" >
+                    <h2 class="fw9">{{data.title}}</h2>
+                    <h4 class="o-60">{{data.subheading}}</h4>
+                    <p>{{data.description}}</p>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { timelineData } from '@/data';
 export default {
-    name: "TimelineComponent"
+    name: "TimelineComponent",
+    data() {
+        return {
+            timelineData: timelineData,
+            leftStart: false
+        }
+    }
 }
 </script>
 
@@ -45,7 +66,7 @@ export default {
 /* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0.5em;
 }
 
@@ -57,7 +78,7 @@ export default {
     background-color: white;
     top: 0;
     bottom: 0;
-    left: 56.5%;
+    left: 56%;
     margin-left: -3px;
 }
 
@@ -132,6 +153,7 @@ export default {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    white-space: pre-line;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
