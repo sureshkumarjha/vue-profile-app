@@ -1,14 +1,14 @@
 <template>
     <div class="timeline">
         <div class="container left">
-            <div class="content grow shadow-3">
+            <div class="content grow shadow-3 bg-left">
                 <h2 class="fw6">TATA CONSULTANCY SERVICES</h2>
                 <h4 class="o-60">July 2021 - Present | Mumbai, MH</h4>
                 <p>SOFTWARE ENGINEER</p>
             </div>
         </div>
         <div class="container right">
-            <div class="content grow shadow-3">
+            <div class="content grow shadow-3 bg-right">
                 <h2 class="fw6">ABN AMRO BANK - ORDER PROCESSING</h2>
                 <h4 class="o-60">Feb 2021 - Present | Role: Devops Engineer</h4>
                 <p>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="container left">
-            <div class="content grow shadow-3">
+            <div class="content grow shadow-3 bg-left">
                 <h2 class="fw6">MANPOWERGROUP USA- EXPERIS 2.0</h2>
                 <h4 class="o-60">July 2021 – Feb 2022| Role: Developer</h4>
                 <p>
@@ -38,8 +38,8 @@
             </div>
         </div>
         <div v-for="(data,index) in timelineData" :key="index">
-            <div class="container" :class="{ 'right' : (index%2==leftStart) , 'left' : !(index%2==leftStart)}">
-                <div class="content grow shadow-3" >
+            <div class="container" :class="{ 'right' : (index%2==leftStart) , 'left' : !(index%2==leftStart) }">
+                <div class="content grow shadow-3" :class="{ 'bg-right' : (index%2==leftStart) ,'bg-left' : !(index%2==leftStart)  }">
                     <h2 class="fw6">{{data.title}}</h2>
                     <h4 class="o-60">{{data.subheading}}</h4>
                     <p>{{data.description}}</p>
@@ -112,6 +112,7 @@ export default {
 /* Place the container to the right */
 .right {
     left: 50%;
+
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -125,7 +126,7 @@ export default {
     right: 30px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
+    border-color: transparent transparent transparent #7700ff13;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -139,7 +140,7 @@ export default {
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent #ff000013 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -150,10 +151,18 @@ export default {
 /* The actual content */
 .content {
     padding: 20px 30px;
-    background-color: white;
     position: relative;
     border-radius: 6px;
     white-space: pre-line;
+    background-color: #ff000013;
+}
+
+.bg-left {
+    background-color: #7700ff13;
+}
+
+.bg-right {
+    background-color: #ff000013;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
