@@ -7,7 +7,7 @@
           <div>
             <img :src="profile" height="250" className='ma1 br-100 shadow-1 avtar-shadow' />
             <div className='subheading'>HEY! I AM</div>
-            <div className='f2 heading pa2 b'>Suresh Kumar Jha</div>
+            <div className='f2 heading pa2 b animate__animated animate__bounceInDown'>Suresh Kumar Jha</div>
             <SlidingTextComponent />
           </div>
           <div class="arrow-container mt5">
@@ -18,88 +18,10 @@
         </div>
       </div>
     </section>
-
-    <AboutComponent />
-
-    <section id="projects">
-      <div className='subheading tc f2 pa2 ma5'>PROJECTS</div>
-      <div className="tc flex justify-center flex-wrap container">
-
-        <article className="mw5-ns  center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div className="tc">
-            <h1 className="f4">Mimi Whitehouse</h1>
-            <hr className="bb bw1 b--black-10" />
-          </div>
-          <p className="lh-copy measure center f6 black-70">
-            Quite affectionate and outgoing.
-            She loves to get chin scratches and will
-            roll around on the floor waiting for you give her more of them.
-          </p>
-        </article>
-
-        <article className="mw5-ns center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div className="tc">
-            <h1 className="f4">Mimi Whitehouse</h1>
-            <hr className=" bb bw1 b--black-10" />
-          </div>
-          <p className="lh-copy measure center f6 black-70">
-            Quite affectionate and outgoing.
-            She loves to get chin scratches and will
-            roll around on the floor waiting for you give her more of them.
-          </p>
-        </article>
-
-        <article className="mw5-ns center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div className="tc">
-            <h1 className="f4">Mimi Whitehouse</h1>
-            <hr className=" bb bw1 b--black-10" />
-          </div>
-          <p className="lh-copy measure center f6 black-70">
-            Quite affectionate and outgoing.
-            She loves to get chin scratches and will
-            roll around on the floor waiting for you give her more of them.
-          </p>
-        </article>
-
-        <article className="mw5-ns  center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div className="tc">
-            <h1 className="f4">Mimi Whitehouse</h1>
-            <hr className="bb bw1 b--black-10" />
-          </div>
-          <p className="lh-copy measure center f6 black-70">
-            Quite affectionate and outgoing.
-            She loves to get chin scratches and will
-            roll around on the floor waiting for you give her more of them.
-          </p>
-        </article>
-
-        <article className="mw5-ns center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div className="tc">
-            <h1 className="f4">Mimi Whitehouse</h1>
-            <hr className=" bb bw1 b--black-10" />
-          </div>
-          <p className="lh-copy measure center f6 black-70">
-            Quite affectionate and outgoing.
-            She loves to get chin scratches and will
-            roll around on the floor waiting for you give her more of them.
-          </p>
-        </article>
-
-        <article className="mw5-ns center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-          <div className="tc">
-            <h1 className="f4">Mimi Whitehouse</h1>
-            <hr className=" bb bw1 b--black-10" />
-          </div>
-          <p className="lh-copy measure center f6 black-70">
-            Quite affectionate and outgoing.
-            She loves to get chin scratches and will
-            roll around on the floor waiting for you give her more of them.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
+    <div class="theme-light-blue-bg">
+      <AboutComponent />
+      <ProjectComponent />
+    </div>
   </div>
 </template>
 
@@ -108,18 +30,20 @@ import avtar from "../assets/avtar.jpg";
 import profile from "../assets/suresh.jpg";
 import SlidingTextComponent from "@/components/SlidingTextComponent.vue";
 import AboutComponent from "@/components/AboutComponent.vue";
+import ProjectComponent from "@/components/ProjectComponent.vue";
 
 export default {
   name: "HomeView",
   data() {
     return {
       avtar: avtar,
-      profile: profile
+      profile: profile,
     }
   },
   components: {
     SlidingTextComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectComponent
   },
   methods: {
     goToPage(e) {

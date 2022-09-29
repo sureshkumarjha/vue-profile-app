@@ -1,18 +1,11 @@
 <template>
-    <section id="about" className='about-margin section flex justify-center theme-light-blue-bg'>
+    <section id="about" className='about-margin section flex justify-center'>
         <div>
             <div className='subheading tc f2 pa2 '>My Journey so far</div>
 
             <div className="flex justify-center  aboutparent">
 
-                <div className="aboutblock container">
-                    <!-- <div className="flex"><span>Name :</span> <span>Suresh Jha</span></div>
-                    <div className="flex"><span>DOB:</span> <span>March 22, 1999</span></div>
-                    <div className="flex"><span>Zip code :</span> <span>400080</span></div>
-                    <div className="flex"><span>Email :</span> <span>ronaldo@gmail.com</span></div>
-                    <div className="flex"><span>Phone : </span> <span>+1-2234-5678-9-0</span></div> -->
-                    
-
+                <div className="aboutblock container animate__animated animate__fadeInLeft">
                     <div class="bg-info br4 shadow-1 mb4 tc">
                         <h3 class="tc">So what About me?</h3>
                         <img :src="profile2" class="w-90 br2" alt="A bright blue sky" />

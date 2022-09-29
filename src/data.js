@@ -1,6 +1,6 @@
 let rolesList = [
-    "Web Designer.",
     "Developer.",
+    "Web Designer.",
     "BasketBall Player.",
     "Nerdy!"
 ];

@@ -11,7 +11,7 @@
                 <div className='flex flex-column justify-center'>
                     <div className="closebtn" @click="closeNav">&times;</div>
                     <div @click="closeNav('about')">About</div>
-                    <div @click="closeNav('resume')">Resume</div>
+                    <div @click="closeNav('projects')">Projects</div>
                     <div @click="closeNav('contact')">Contact</div>
                 </div>
             </div>

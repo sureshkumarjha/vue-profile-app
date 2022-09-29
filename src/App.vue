@@ -10,6 +10,7 @@
 import NavBar from "./components/NavBar.vue";
 import FooterComponent from './components/FooterComponent.vue';
 import 'tachyons';
+import 'animate.css';
 import './App.css';
 
 export default {
