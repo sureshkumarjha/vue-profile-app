@@ -1,43 +1,21 @@
 <template>
     <div class="timeline">
-        <div class="container left">
-            <div class="content grow shadow-3 bg-left">
-                <h2 class="fw6">TATA CONSULTANCY SERVICES</h2>
-                <h4 class="o-60">July 2021 - Present | Mumbai, MH</h4>
-                <p>SOFTWARE ENGINEER</p>
-            </div>
-        </div>
-        <div class="container right">
-            <div class="content grow shadow-3 bg-right">
-                <h2 class="fw6">ABN AMRO BANK - ORDER PROCESSING</h2>
-                <h4 class="o-60">Feb 2021 - Present | Role: Devops Engineer</h4>
+        <div v-for="(data,index) in experienceTimelineData" :key="index">
+            <div class="container" :class="{ 'right' : (index%2==rightStart) , 'left' : !(index%2==rightStart) }">
+                <div class="content grow shadow-3" :class="{ 'bg-right' : (index%2==rightStart) ,'bg-left' : !(index%2==rightStart)  }">
+                    <h2 class="fw6">{{data.companyName}}</h2>
+                <h4 class="o-60">PROJECT: {{data.projectName}}</h4>
+                <h4 class="o-60">{{data.projectDuration}}</h4>
                 <p>
-                    vai TATA CONSULTANCY SERVICES
+                    ROLE: <b>{{data.role }}</b>
                 <ul>
-                    <li>Adopted Devops way of working and migrated applications
-                        from on-premises IBM CMS to public cloud Azure FSCP 3.0 with new enhancements</li>
-                    <li>Implemented PingFederate Oauth 2.0
-                        Authorization code flow and Client credential flow in application.</li>
+                    <li v-for="(li, idx) in data.expPoints" :key="idx">{{li}}</li>
                 </ul>
                 </p>
+                </div>
             </div>
         </div>
-        <div class="container left">
-            <div class="content grow shadow-3 bg-left">
-                <h2 class="fw6">MANPOWERGROUP USA- EXPERIS 2.0</h2>
-                <h4 class="o-60">July 2021 – Feb 2022| Role: Developer</h4>
-                <p>
-                    vai TATA CONSULTANCY SERVICES
-                <ul>
-                    <li>Developed new screens and rest services for Inheritance feature using
-                        Angular 9, Springboot and SQL</li>
-                    <li>Improved code quality and optimized the UI & deployment and testing of the system including unit
-                        testing</li>
-                </ul>
-                </p>
-            </div>
-        </div>
-        <div v-for="(data,index) in timelineData" :key="index">
+        <div v-for="(data,index) in educationTimelineData" :key="index">
             <div class="container" :class="{ 'right' : (index%2==leftStart) , 'left' : !(index%2==leftStart) }">
                 <div class="content grow shadow-3" :class="{ 'bg-right' : (index%2==leftStart) ,'bg-left' : !(index%2==leftStart)  }">
                     <h2 class="fw6">{{data.title}}</h2>
@@ -50,13 +28,16 @@
 </template>
 
 <script>
-import { timelineData } from '@/data';
+import { educationTimelineData } from '@/data';
+import { experienceTimelineData } from '@/data';
 export default {
     name: "TimelineComponent",
     data() {
         return {
-            timelineData: timelineData,
-            leftStart: false
+            educationTimelineData: educationTimelineData,
+            experienceTimelineData:experienceTimelineData,
+            leftStart: (experienceTimelineData.length%2 == 0),
+            rightStart:true
         }
     }
 }

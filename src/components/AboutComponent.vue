@@ -13,7 +13,7 @@
                             <p> Hi, I'm Suresh Kumar Jha, I'm <strong _>Full stack Developer</strong> + I love to work
                                 on <strong>Project &amp; Ideas</strong> + loves <strong>challenging</strong>
                                 assignments.</p>
-                            <p>Enthusiastic focused and motivated Junior Developer with <strong>1+ year</strong> of
+                            <p>Enthusiastic focused and motivated Developer with <strong>{{ (new Date().getFullYear() - 2021) + "+"}} year</strong> of
                                 experience is seeking an
                                 opportunity to contribute to institutions by implementing concepts, knowledge, and
                                 methodologies to learn thereby adding value for the organization. Flexible and adaptable
@@ -27,8 +27,8 @@
                             <div class="tc">
                                 <li class="dib mr1 mb2">
                                 <a target="_blank"
-                                    href="https://drive.google.com/file/d/1K6_u9E8PK4ZJrN2-GvMeIRnuQe1e1S0K/view"
-                                    class="f6 f5-ns b db pa2 link dim dark-gray ba b--black-20">Download Resume
+                                    href="https://drive.google.com/file/d/1qCvRsv-41Ar7CWAX4pMjihu7g2eITEC-/view?usp=sharing"
+                                    class="f6 f5-ns b db pa2 link dim dark-gray ba b--black-20">View Resume
                                 </a>
                             </li>
                             </div>

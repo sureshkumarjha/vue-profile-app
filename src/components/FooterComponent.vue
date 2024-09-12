@@ -5,7 +5,7 @@
             <div className="dt dt--fixed w-100">
                 <div className="dn dtc-ns v-mid">
                     <p className="f7 black-70 dib pr3 mb3">
-                        Copyright © SureshKumarJha 2022
+                        Copyright © SureshKumarJha
                     </p>
                 </div>
                 <div className="db dtc-ns black-70 tc tr-ns v-mid">
@@ -49,7 +49,7 @@
             </div>
             <div className="db dn-ns">
                 <p className="f7 black-70 mt4 tc">
-                    Copyright © SureshKumarJha 2022
+                    Copyright © SureshKumarJha
                 </p>
             </div>
         </footer>
